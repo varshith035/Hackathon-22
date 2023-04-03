@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Toggle Switch Button</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="stylebutton.css">
+</head>
+<body>
+   <style>
+    BODY{background-color: rgba(192, 192, 192)}
+{
+  font-family:sans-serif; 
+  background: -webkit-linear-gradient(to right, #155799, #159957);  
+  background: linear-gradient(to right, #155799, #159957); 
+  color:red;
+}
+.center {
+  text-align: center;
+  border: 1px solid black;
+font-size: 130%;
+padding:0.0001%
+}
+.right {
+  position: absolute;
+  right: 0px;
+  width: 1400px;
+  padding: 20px;
+font-size: 200%;
+}
+form{
+    width:50rem;
+    height:40rem;
+    margin: auto;
+    color:black;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(192, 192, 192);
+    border-radius: 12px;
+    border: 1px solid black;
+    padding: 20px 25px;
+}
+@media screen and (max-width: 600px) {
+    form{
+      width: 25rem;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    form{
+      width: 20rem;
+    }
+  }
+   </style>
+   <form action="">
+    <div class="center">
+        <h1><font size=7>REMINDER</font></h1>
+    </div>
+   <br>
+   
+    <label for="water"><font size=6>Water reminder</font></label>
+      <label class="switch">
+        <input type="checkbox" checked>
+        <span class="slider round">
+          <label type="checkbox" class="switch" onclick="alert('To get the Water Reminder, Please Do not OFF.');">
+        </span>
+      </label>
+      <img src="water.jpg"  width="350px" height="200px" align="right">
+      <br><br>
+      <label for="period"><font size=6>Period status</font></label>
+      <label class="switch">
+        <input type="checkbox" checked>
+        <span class="slider round">
+          <label type="checkbox" class="switch" onclick="alert('To get the Period Status , Please Do not OFF.');">
+        </span>
+      </label><br><br>
+      <label for="sanitary pad"><font size=6>Sanitary pad</font></label>
+      <label class="switch">
+        <input type="checkbox" checked>
+        <span class="slider round">
+          <label type="checkbox" class="switch" onclick="alert('To get the Sanitary Pad Status, Please Do not OFF.');">
+        </span>
+      </label>
+      
+    </form>
+</body>
+</html>

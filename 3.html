@@ -1,0 +1,179 @@
+<!Doctype Html>  
+<Html>     
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width" initial-scale="1.0">
+    <link rel="stylesheet" href="loginpage.css">
+    <title>Login page in HTML</title>
+     
+  </Head>  
+<Body>   
+<style>
+body{ 
+background-color:rgb(192,192,192); 
+background-repeat:no-repeat; 
+background-size:cover;
+} 
+{
+  font-family:sans-serif; 
+  background: -webkit-linear-gradient(to right, #155799, #159957);  
+  background: linear-gradient(to right, #155799, #159957); 
+  color:red;
+}
+.center {
+  text-align: center;
+  border: 1px solid black;
+font-size: 130%;
+padding:0.0001%
+}
+.right {
+  position: absolute;
+  right: 0px;
+  width: 1400px;
+  padding: 20px;
+font-size: 200%;
+}
+form{
+    width:auto;
+    height:auto;
+    margin: auto;
+    color:black;
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgb(192,192,192);
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 0);
+    padding: 20px 25px;
+opacity:0.7;
+}
+@media screen and (max-width: 600px) {
+    form{
+      width: 25rem;
+    }
+  }
+  
+  @media screen and (max-width: 400px) {
+    form{
+      width: 20rem;
+    }
+  }
+
+</style> 
+   
+<form action="">
+ <div class="center">
+
+<h1>TRACKER<h1>
+</div>
+<br>
+<img src="regular.jpg" align="right" width=300 height="300">
+
+<label for="fname"><font size=5  font color="black" >period date:</label>
+<input type="date" id="birthday" name="birthday">
+<br>
+<br>
+<label for="fname"><font size=5  font color="black" >no of days:</label>
+<select name="select1" onmousedown="if(this.options.length>8){this.size=8;}"  onchange='this.size=0;' onblur="this.size=0;">
+             <option value="1"> 1</option>
+             <option value="2"> 2</option>
+             <option value="3">3</option>
+             <option value="4">4</option>
+             <option value="5">5</option>
+             <option value="6">6</option>
+             <option value="7">7</option>
+             <option value="8">8</option>
+             <option value="9"> 9</option>
+             <option value="10">10</option>
+             <option value="11">11</option>
+             <option value="12"> 12</option>
+           </select>
+<br>
+<br>
+<label for="fname"><font size=5  font color="black">period date:</label>
+<select name="select1" onmousedown="if(this.options.length>8){this.size=8;}"  onchange='this.size=0;' onblur="this.size=0;">
+             <option value="20"> 20</option>
+             <option value="21"> 21</option>
+             <option value="22">22</option>
+             <option value="23">23</option>
+             <option value="24">24</option>
+             <option value="25">25</option>
+             <option value="26">26</option>
+             <option value="27">27</option>
+             <option value="28">28</option>
+             <option value="29">29</option>
+
+             <option value="30">30</option>
+             <option value="31">31</option>
+             <option value="32">32</option>
+             <option value="33">33</option>
+             <option value="34">34</option>
+             <option value="35">35</option>
+           </select>
+
+          
+<br>
+<br>
+
+<br>
+<br>
+<form id="myForm">
+<font color="black" font size="5" >Status:</font><td><font color="black" font size="5">
+
+ <input type="radio" name="level" id="GCSE" value="GCSE"  /> regular 
+<input type="radio" name="level" id="AS" value="AS" />  irregular <br />
+</form>
+
+<p><font color="black" font size="4" >
+Note : If Mensutration is Regular Click on Regular else Irregular
+</font></p>
+<img src="irregular.png" align="right" width=300 height="300">
+<p>
+  <h3>Choose irregular if you have below symptoms</h3>
+  <li>Your menstrual cycle might be regular — about the same length every month </li> 
+  <li>your period might be light or heavy, painful or pain-free, long or short, and still be considered normal. </li>
+  <li>your diet and mental health causes regular</li>
+  <h3>Choose irregular if you have below symptoms</h3>
+  <li>Your periods suddenly stop for more than 90 days — and you're not pregnant</li>
+  <li>You bleed for more than seven days</li>
+  <li>You bleed more heavily than usual or soak through more than one pad or tampon every hour </li>
+  <li>Your periods are less than 21 days or more than 35 days apart You bleed between periods</li>
+  <li>You develop severe pain during your period</li>
+  <li>You suddenly get a fever and feel sick after using tampons</li>
+</p>
+
+</div>
+<h5>for consultancy click on the <a href="consultancy.html">link</a></h5>
+<table   align="right" > 
+<tr>
+    <th width="1200"></th> 
+<th><button type="submit" value="Submit" > 
+Submit</button></th> 
+</tr> 
+</table>
+
+</form>
+</Body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+  var item = document.querySelector('#AS');
+
+  item.addEventListener('change',function(){
+    if(this.checked){
+      Swal.fire({
+        title: '<strong>Consulting Doctors</strong>',
+        // icon: 'info',
+        html:
+          'Near By Consulting locations <b>Click</b> ' +
+          '<a href="https://www.google.com/maps/search/gynecologist+hospitals/@18.0109195,79.5469901,14z">links</a> ',
+        showCloseButton: true,
+        showCancelButton: true,
+        focusConfirm: false,
+        confirmButtonText: 'Ok',
+        showCancelButton:false
+      });
+    }
+  });
+</script>
